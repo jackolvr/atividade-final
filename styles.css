@@ -1,0 +1,247 @@
+body {
+    background: linear-gradient(135deg, #0d47a1 0%, #42a5f5 100%);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.caixa-clima {
+    position: fixed;
+    top: 2vw;
+    right: 3vw;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding: 2vw 3vw;
+    min-width: 180px;
+    z-index: 9999;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 90vw;
+}
+
+.icone-localizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 46px;
+    border-radius: 4px;
+    background: #fff;
+    min-width: 56px;
+    min-height: 46px;
+}
+
+.icone-localizacao svg {
+    width: 36px;
+    height: 36px;
+    fill: #2a4d8f;
+}
+
+#cidade {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2a4d8f;
+    word-break: break-word;
+    max-width: 120px;
+}
+
+#temperatura {
+    display: block;
+    font-size: 2.2em;
+    color: #e67e22;
+}
+
+#status-clima {
+    display: block;
+    font-size: 1.1em;
+    color: #888;
+    margin-left: 10px;
+}
+
+.titulo-sistema {
+    margin: 60px auto 0 auto;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(13, 71, 161, 0.18);
+}
+
+.container-login {
+    background: #e3f2fd;
+    max-width: 400px;
+    width: 100%;
+    margin: 32px auto 0 auto;
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(13, 71, 161, 0.18);
+    text-align: center;
+    border: 2px solid #1976d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-login {
+    margin-bottom: 24px;
+    color: #1565c0;
+    letter-spacing: 1px;
+    font-size: 2.2em;
+}
+
+label {
+    display: block;
+    margin: 16px 0 6px 0;
+    text-align: left;
+    color: #1976d2;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #64b5f6;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    background: #fff;
+    color: #0d47a1;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 2px solid #1976d2;
+    box-shadow: 0 0 6px #42a5f5;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #1565c0 0%, #1976d2 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.mensagem-erro {
+    color: #d63031;
+    margin-top: 10px;
+    font-size: 16px;
+    min-height: 18px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+    overflow-x: hidden;
+}
+
+@media (max-width: 667px) {
+    .caixa-clima {
+        position: static;
+        margin: 12px auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 98vw;
+        min-width: unset;
+        max-width: 98vw;
+        padding: 10px 2vw;
+        font-size: 1.2em;
+        gap: 8px;
+    }
+    .icone-localizacao {
+        width: 48px;
+        height: 38px;
+        min-width: 48px;
+        min-height: 38px;
+    }
+    .icone-localizacao svg {
+        width: 40px;
+        height: 40px;
+    }
+    #cidade {
+        max-width: 80px;
+        font-size: 1.3em;
+    }
+    #temperatura {
+        font-size: 2em;
+    }
+    .titulo-sistema {
+        font-size: 2em;
+        margin-top: 18px;
+    }
+    .container-login {
+        max-width: 98vw;
+        padding: 18px 2vw;
+        margin-top: 18px;
+    }
+    .titulo-login {
+        font-size: 2em;
+    }
+    label {
+        font-size: 1.2em;
+    }
+    input[type="text"], input[type="password"] {
+        font-size: 1.2em;
+        padding: 14px;
+    }
+    button {
+        font-size: 1.2em;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caixa-clima {
+        padding: auto;
+        font-size: 1em;
+        gap: 20px;
+    }
+    .icone-localizacao svg {
+        width: 36px;
+        height: 36px;
+    }
+    #cidade {
+        max-width: 60px;
+        font-size: 1.1em;
+        white-space: nowrap;
+        padding-right: 10%;
+    }
+    #temperatura {
+        font-size: 1.2em;
+    }
+    .titulo-sistema {
+        font-size: 2em;
+    }
+}
