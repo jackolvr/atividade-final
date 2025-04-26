@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Trading</title>
+  <link rel="icon" type="image/png" href="/media/foguete.png">
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+  <section class="cabecalho-pagina">
+    <h1 class="titulo">🤖Assistente de Trading</h1>
+    <button class="btn-sair" id="btnSair" title="Sair">🚪Sair</button>
+  </section>
+  <form class="formulario-ordem" id="formularioOrdem">
+    <div class="linha-formulario">
+      <div class="grupo-formulario">
+        <h3 class="subtitulo">📈Configurações da Operação</h3>
+        <label for="moeda">Digite a moeda (ex.: BTC):</label>
+        <input type="text" id="moeda" placeholder="ada" required>
+      </div>
+      <div class="grupo-formulario">
+        <label for="valor">Valor em USDT para a ordem:</label>
+        <input type="number" id="valor" placeholder="10.00" step="0.01" value="10.00" required>
+      </div>
+    </div>
+    <div class="linha-formulario">
+      <div class="grupo-formulario">
+        <label>Estratégia de Trading</label>
+        <div class="grupo-radio">
+          <label><input type="radio" name="estrategia" value="Estratégia Padrão" checked> Estratégia Padrão</label>
+          <label><input type="radio" name="estrategia" value="Day Trade"> Day Trade</label>
+          <label><input type="radio" name="estrategia" value="Swing Trade"> Swing Trade</label>
+        </div>
+      </div>
+    </div>
+      <div class="linha-formulario">
+      <button type="submit" class="btn-analisar">🚀Analisar Mercado</button>
+    </div>
+  </form>
+
+  <div id="resultados" style="display:none;">
+    <section class="indicadores">
+      <h2>📊 Indicadores do Mercado</h2>
+      <div class="linha-indicadores">
+        <div>
+          <div class="rotulo-indicador">Par</div>
+          <div class="valor-indicador" id="par"></div>
+          <div class="rotulo-indicador">Preço Atual</div>
+          <div class="valor-indicador" id="preco"></div>
+          <div class="rotulo-indicador">Estratégia</div>
+          <div class="valor-indicador" id="estrategia"></div>
+        </div>
+        <div>
+          <div class="rotulo-indicador">Média Móvel</div>
+          <div class="valor-indicador" id="media_movel"></div>
+          <div class="rotulo-indicador">RSI</div>
+          <div class="valor-indicador" id="ifr"></div>
+          <div class="rotulo-indicador">Variação 24h</div>
+          <div class="valor-indicador" id="variacao"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resumo">
+      <h3>📄 Resumo da Operação Sugerida</h3>
+      <div class="caixa-resumo">
+        <div class="cabecalho-resumo">
+          <span class="status-resumo verde"></span>
+          <span id="resumo-operacao"></span>
+        </div>
+        <div class="info-resumo">
+          <div><strong>Valor:</strong> <span id="resumo-valor"></span> USDT</div>
+          <div><strong>Preço de entrada:</strong> <span id="resumo-preco"></span></div>
+          <div><strong>Take Profit:</strong> <span id="resumo-take"></span></div>
+          <div><strong>Stop Loss:</strong> <span id="resumo-stop"></span></div>
+        </div>
+        <button class="btn-confirmar" id="btnConfirmar">✅ Confirmar e Executar Operação</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

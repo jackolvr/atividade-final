@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/media/foguete.png">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div id="caixa-clima" class="caixa-clima">
@@ -23,10 +24,10 @@
         <h1 class="titulo-login">Login</h1>
         <form id="formulario-login">
             <label for="usuario">Usuário</label>
-            <input type="text" id="usuario" name="usuario" required>
+            <input type="text" id="usuario" name="usuario" required autocomplete="username">
 
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" required>
+            <input type="password" id="senha" name="senha" required autocomplete="current-password">
 
             <button type="submit">Entrar</button>
             <p id="mensagem-erro" class="mensagem-erro"></p>
